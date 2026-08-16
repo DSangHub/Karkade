@@ -1,0 +1,25 @@
+karkade/
+├── frontend/
+│   ├── src/
+│   │   ├── components/
+│   │   │   ├── game/
+│   │   │   ├── dashboard/
+│   │   │   ├── chat/
+│   │   │   └── ads/
+│   │   ├── hooks/
+│   │   ├── store/
+│   │   ├── services/
+│   │   └── utils/
+│   ├── package.json
+│   └── vite.config.ts
+├── backend/
+│   ├── src/
+│   │   ├── controllers/
+│   │   ├── services/
+│   │   ├── models/
+│   │   ├── routes/
+│   │   ├── middleware/
+│   │   └── socket/
+│   ├── package.json
+│   └── tsconfig.json
+└── docker-compose.yml

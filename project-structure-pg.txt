@@ -1,0 +1,24 @@
+backend/
+├── src/
+│   ├── server.ts
+│   ├── config/
+│   │   └── database.ts
+│   ├── models/
+│   │   ├── User.ts
+│   │   ├── Dealer.ts
+│   │   ├── AdCampaign.ts
+│   │   └── Payout.ts
+│   ├── routes/
+│   │   ├── auth.ts
+│   │   ├── players.ts
+│   │   ├── dealers.ts
+│   │   ├── ads.ts
+│   │   └── payouts.ts
+│   ├── middleware/
+│   │   └── auth.ts
+│   └── services/
+│       ├── adEngine.ts
+│       └── revenueShare.ts
+├── package.json
+├── tsconfig.json
+└── .env

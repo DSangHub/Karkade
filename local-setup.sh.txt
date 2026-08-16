@@ -1,0 +1,17 @@
+# Clone repo
+git clone https://github.com/yourusername/karkade.git
+cd karkade
+
+# Start all services
+docker-compose up -d
+
+# Or run separately
+# Backend
+cd backend
+npm install
+npm run dev
+
+# Frontend (new terminal)
+cd frontend
+npm install
+npm run dev

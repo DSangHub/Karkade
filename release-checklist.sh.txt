@@ -1,0 +1,25 @@
+# 1. Environment Setup
+export OPENAI_API_KEY=sk-...
+export STRIPE_SECRET_KEY=sk_live_...
+export DATABASE_URL=postgresql://...
+export REDIS_URL=redis://...
+
+# 2. Database Migration
+cd backend
+npm run migrate
+
+# 3. Build & Deploy Backend
+flyctl deploy
+
+# 4. Deploy Frontend
+cd frontend
+npm run build
+netlify deploy --prod
+
+# 5. Build Mobile App
+cd mobile
+eas build --platform all
+
+# 6. Monitor
+curl https://api.karkade.app/health
+# Should return: { "status": "ok" }

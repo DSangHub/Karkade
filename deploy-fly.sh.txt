@@ -1,0 +1,29 @@
+# Install flyctl
+curl -L https://fly.io/install.sh | sh
+
+# Create fly.toml
+cat > fly.toml << 'EOF'
+app = "karkade-api"
+primary_region = "lax"
+
+[build]
+  builder = "paketobuildpacks/builder-jammy-base"
+
+[env]
+  NODE_ENV = "production"
+  PORT = "8080"
+
+[[services]]
+  protocol = "tcp"
+  internal_port = 8080
+  [[services.ports]]
+    port = 80
+    handlers = ["http"]
+  [[services.ports]]
+    port = 443
+    handlers = ["tls", "http"]
+EOF
+
+# Deploy
+flyctl launch
+flyctl deploy

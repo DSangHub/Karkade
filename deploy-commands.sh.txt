@@ -1,0 +1,13 @@
+# Install flyctl
+curl -L https://fly.io/install.sh | sh
+
+# Deploy backend
+cd backend
+fly launch --name karkade-api
+fly secrets set DATABASE_URL=... OPENAI_API_KEY=...
+fly deploy
+
+# Deploy frontend
+cd ../frontend
+fly launch --name karkade-app
+fly deploy
